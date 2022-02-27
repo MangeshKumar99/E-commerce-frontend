@@ -3,6 +3,7 @@ import { isAuthenticated } from "../auth/helper";
 import { getToken, processTransaction } from "../core/helper/paymentHelper";
 import DropIn from "braintree-web-drop-in-react";
 import { createOrder } from "../core/helper/orderHelper";
+import { Scrollbars } from "react-custom-scrollbars";
 
 const Payment = () => {
   const { user } = isAuthenticated();
@@ -58,8 +59,8 @@ const Payment = () => {
             // }
             // createOrder(user._id,orderData,JSON.parse(localStorage.getItem("jwt")).token)
 
-            // localStorage.removeItem("myCart");
-            // window.location.reload(false);
+            localStorage.removeItem("myCart");
+            window.location.reload(false);
           })
           .catch((err) => {
             console.log("PAYMENT FAILED", err);
@@ -87,6 +88,7 @@ const Payment = () => {
       {(!token.clientToken || !isAuthenticated) && (
         <h3>User not authenticated, please login again!</h3>
       )}
+        <Scrollbars style={{ width: 600, height: 300 }}>
       {token.clientToken && isAuthenticated && (
         <DropIn
           options={{ authorization: token.clientToken }}
@@ -100,6 +102,7 @@ const Payment = () => {
           </button>
         </div>
       )}
+      </Scrollbars>
     </>
   );
 };
