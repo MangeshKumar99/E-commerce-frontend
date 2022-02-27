@@ -111,7 +111,7 @@ const AddProduct = () => {
   const createProductForm = () => {
     return (
       <form>
-        <div className="mb-3">
+        <div className="mb-2">
           <label className="form-label">Post photo</label>
           <input
             className="form-control"
@@ -122,7 +122,7 @@ const AddProduct = () => {
           />
         </div>
 
-        <div className="mb-3">
+        <div className="mb-2">
           <input
             type="text"
             name="name"
@@ -133,7 +133,7 @@ const AddProduct = () => {
           />
         </div>
 
-        <div className="mb-3">
+        <div className="mb-2">
           <textarea
             name="description"
             value={description}
@@ -143,7 +143,7 @@ const AddProduct = () => {
           ></textarea>
         </div>
 
-        <div className="mb-3">
+        <div className="mb-2">
           <input
             type="number"
             name="price"
@@ -154,7 +154,7 @@ const AddProduct = () => {
           />
         </div>
 
-        <div className="mb-3">
+        <div className="mb-2">
           <select
             name="category"
             onChange={onHandleChange}
@@ -169,7 +169,7 @@ const AddProduct = () => {
           </select>
         </div>
 
-        <div className="mb-3">
+        <div className="mb-2">
           <input
             type="number"
             name="stock"
