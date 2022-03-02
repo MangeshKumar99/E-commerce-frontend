@@ -179,7 +179,7 @@ const AddProduct = () => {
             placeholder="Quantity"
           />
         </div>
-        <div className="d-flex">
+        <div className="d-flex mb-1">
           <button
             onClick={createAProduct}
             type="submit"

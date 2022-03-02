@@ -44,7 +44,7 @@ const Cart = () => {
         <div className="col-6">
         <div className="text-info">Your bill is ${getAmount()}</div>
           What's in your cart? &nbsp;&nbsp;{cart.length} products currently
-          <Scrollbars style={{ width: 500, height: 250 }}>
+          <Scrollbars style={{ width: 500, height: 300 }}>
             <>
               {cart.map((pro, index) => {
                 return (

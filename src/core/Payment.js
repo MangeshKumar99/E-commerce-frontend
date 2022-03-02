@@ -88,7 +88,7 @@ const Payment = () => {
       {(!token.clientToken || !isAuthenticated) && (
         <h3>User not authenticated, please login again!</h3>
       )}
-        <Scrollbars style={{ width: 600, height: 300 }}>
+        {/* <Scrollbars style={{ width: 600, height: 300 }}> */}
       {token.clientToken && isAuthenticated && (
         <DropIn
           options={{ authorization: token.clientToken }}
@@ -102,7 +102,7 @@ const Payment = () => {
           </button>
         </div>
       )}
-      </Scrollbars>
+      {/* </Scrollbars> */}
     </>
   );
 };
