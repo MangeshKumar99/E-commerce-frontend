@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { API } from "../backend";
 import Base from "./Base";
-import { Scrollbars } from "react-custom-scrollbars";
 import Payment from "./Payment";
 
 const Cart = () => {
@@ -41,14 +40,14 @@ const Cart = () => {
         </Link>
       </button>
       <div className="row">
-        <div className="col-6">
+        <div className="col-12 col-md-6">
         <div className="text-info">Your bill is ${getAmount()}</div>
           What's in your cart? &nbsp;&nbsp;{cart.length} products currently
-          <Scrollbars style={{ width: 500, height: 300 }}>
+          {/* <Scrollbars style={{ width: 500, height: 300 }}> */}
             <>
               {cart.map((pro, index) => {
                 return (
-                  <div className="card w-50 text-center text-white bg-dark border-1 border-info">
+                  <div style={{width: '20rem'}} className="card text-center text-white bg-dark border-1 border-info">
                     <div className="card-text">{pro.name}</div>
                     <img
                       src={`${API}/product/photo/${pro._id}`}
@@ -78,10 +77,8 @@ const Cart = () => {
                 );
               })}
             </>
-          </Scrollbars>
         </div>
-        <div className="col-6">
-        
+        <div className="col-12 col-md-6">
           <Payment/>
         </div>
       </div>
