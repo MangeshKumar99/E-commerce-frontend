@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import { isAuthenticated } from "../auth/helper";
 import { getToken, processTransaction } from "../core/helper/paymentHelper";
 import DropIn from "braintree-web-drop-in-react";
-import { createOrder } from "../core/helper/orderHelper";
-import { Scrollbars } from "react-custom-scrollbars";
+
 
 const Payment = () => {
   const { user } = isAuthenticated();

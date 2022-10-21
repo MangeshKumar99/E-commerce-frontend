@@ -38,7 +38,7 @@ const ReusableCard = () => {
     <>
       {product.map((pro, index) => {
         return (
-          <div className="card w-25 text-center text-white bg-dark border-1 border-info">
+          <div style={{width: '20rem'}} className="card text-center text-white bg-dark border-1 border-info">
             <div className="card-text">{pro.name}</div>
             <img
               src={`${API}/product/photo/${pro._id}`}
