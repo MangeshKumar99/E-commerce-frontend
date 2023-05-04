@@ -10,9 +10,20 @@ body {
 /* .product-cards{
   min-width: 25%;
 } */
-/* footer{
+footer{
   position: absolute;
   bottom: 0px;
   right:0px;
   left:0px;
-} */
+}
+.product-section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 25rem;
+  overflow-y: scroll;
+}
+.cart-section{
+  height: 22rem;
+  overflow-y: scroll;
+}

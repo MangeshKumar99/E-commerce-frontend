@@ -39,47 +39,49 @@ const Cart = () => {
           Home
         </Link>
       </button>
-      <div className="row">
+      <div className="row cart-section">
         <div className="col-12 col-md-6">
-        <div className="text-info">Your bill is ${getAmount()}</div>
+          <div className="text-info">Your bill is ${getAmount()}</div>
           What's in your cart? &nbsp;&nbsp;{cart.length} products currently
-          {/* <Scrollbars style={{ width: 500, height: 300 }}> */}
-            <>
-              {cart.map((pro, index) => {
-                return (
-                  <div style={{width: '20rem'}} className="card text-center text-white bg-dark border-1 border-info">
-                    <div className="card-text">{pro.name}</div>
-                    <img
-                      src={`${API}/product/photo/${pro._id}`}
-                      alt="Product unavailable"
-                      className="p-2 w-100"
-                    />
-                    <div className="bg-success m-2">{pro.description}</div>
-                    <div className="bg-info m-2">${pro.price}</div>
-                    {addToCart && (
-                      <button
-                        type="button"
-                        className="btn btn-outline-success m-2"
-                      >
-                        Add To Cart
-                      </button>
-                    )}
-                    {removeFromCart && (
-                      <button
-                        onClick={() => removeItemFromCart(pro._id)}
-                        type="button"
-                        className="btn btn-outline-danger m-2"
-                      >
-                        Remove From Cart
-                      </button>
-                    )}
-                  </div>
-                );
-              })}
-            </>
+          <>
+            {cart.map((pro, index) => {
+              return (
+                <div
+                  style={{ width: "20rem" }}
+                  className="card text-center text-white bg-dark border-1 border-info"
+                >
+                  <div className="card-text">{pro.name}</div>
+                  <img
+                    src={`${API}/product/photo/${pro._id}`}
+                    alt="Product unavailable"
+                    className="p-2 w-100"
+                  />
+                  <div className="bg-success m-2">{pro.description}</div>
+                  <div className="bg-info m-2">${pro.price}</div>
+                  {addToCart && (
+                    <button
+                      type="button"
+                      className="btn btn-outline-success m-2"
+                    >
+                      Add To Cart
+                    </button>
+                  )}
+                  {removeFromCart && (
+                    <button
+                      onClick={() => removeItemFromCart(pro._id)}
+                      type="button"
+                      className="btn btn-outline-danger m-2"
+                    >
+                      Remove From Cart
+                    </button>
+                  )}
+                </div>
+              );
+            })}
+          </>
         </div>
         <div className="col-12 col-md-6">
-          <Payment/>
+          <Payment />
         </div>
       </div>
     </Base>

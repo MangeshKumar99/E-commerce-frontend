@@ -6,7 +6,7 @@ import { Scrollbars } from 'react-custom-scrollbars'
 const Home = () => {
   return (
     <Base title="Home Page" description="Welcome to home page">
-        <div className="d-flex flex-row flex-wrap gap-3 justify-content-center">
+        <div className="product-section">
           <ReusableCard />
         </div>
     </Base>

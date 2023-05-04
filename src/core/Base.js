@@ -15,8 +15,8 @@ const Base=({
                     <h2 className="display-4">{title}</h2>
                     <p className="lead">{description}</p>
                 </div>
-                <div className={className}>{children}</div>
             </div>
+            <div className={className}>{children}</div>
             <footer className="footer bg-dark mt-auto py-1">
                <div className="container-fluid bg-success text-white text-center py-3">
                    <h4>If you got any questions feel free to ask</h4>
